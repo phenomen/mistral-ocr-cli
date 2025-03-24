@@ -1,0 +1,15 @@
+{
+  "name": "mistral-ocr",
+  "module": "index.ts",
+  "bin": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@clack/prompts": "^0.10.0",
+    "@mistralai/mistralai": "^1.5.2",
+    "@types/bun": "^1.2.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
