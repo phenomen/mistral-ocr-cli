@@ -1,3 +1,4 @@
+#!/usr/bin/env bun
 import { readdir, mkdir } from "node:fs/promises";
 import { intro, outro, isCancel, cancel, log, text, select, spinner } from '@clack/prompts';
 import { Mistral } from '@mistralai/mistralai';

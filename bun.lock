@@ -3,9 +3,11 @@
   "workspaces": {
     "": {
       "name": "mistral-ocr",
-      "devDependencies": {
+      "dependencies": {
         "@clack/prompts": "^0.10.0",
         "@mistralai/mistralai": "^1.5.2",
+      },
+      "devDependencies": {
         "@types/bun": "^1.2.5",
       },
       "peerDependencies": {

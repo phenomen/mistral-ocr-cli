@@ -1,15 +1,26 @@
 {
-  "name": "mistral-ocr",
+  "name": "mistral-ocr-cli",
   "module": "index.ts",
-  "bin": "index.ts",
+  "bin": {
+    "mistral-ocr-cli": "./index.ts"
+  },
   "type": "module",
-  "private": true,
+  "private": false,
   "devDependencies": {
-    "@clack/prompts": "^0.10.0",
-    "@mistralai/mistralai": "^1.5.2",
     "@types/bun": "^1.2.5"
   },
   "peerDependencies": {
     "typescript": "^5.8.2"
-  }
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.10.0",
+    "@mistralai/mistralai": "^1.5.2"
+  },
+  "files": [
+    "index.ts"
+  ],
+  "version": "1.0.1",
+  "description": "CLI tool for OCR processing of PDFs using Mistral AI",
+  "author": "phenomen",
+  "license": "MIT"
 }
