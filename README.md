@@ -4,7 +4,7 @@ A CLI utility to OCR PDFs with Mistral and format data into Markdown pages.
 
 ## Usage
 
-1. Create `.env` file with `MISTRAL_API_KEY` ([get Mistral key](https://console.mistral.ai/)).
+1. Create `.env` file with `MISTRAL_API_KEY="your_key"` ([get Mistral key](https://console.mistral.ai/)).
 
 2. Put your PDFs into `/pdf` directory.
 
