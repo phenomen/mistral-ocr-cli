@@ -8,7 +8,7 @@ A CLI utility to OCR PDFs with Mistral and format data into Markdown pages.
 
 2. Put your PDFs into `/pdf` directory.
 
-3. Run CLI in the same directory as `.env` and `/pdf` ([get Bun](https://bun.sh/)
+3. Run CLI in the same directory as `.env` and `/pdf` ([get Bun](https://bun.sh/))
 
 ```bash
 bunx mistral-ocr-cli
