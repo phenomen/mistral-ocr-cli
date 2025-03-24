@@ -19,7 +19,7 @@
   "files": [
     "index.ts"
   ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI tool for OCR processing of PDFs using Mistral AI",
   "author": "phenomen",
   "license": "MIT"

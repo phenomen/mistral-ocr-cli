@@ -33,9 +33,9 @@ async function main() {
     const operation = await select({
       message: 'What do you want to do?',
       options: [
-        { value: 'upload', label: 'Upload PDF' },
+        { value: 'upload', label: 'Upload PDF to Mistral' },
         { value: 'ocr', label: 'OCR uploaded PDF' },
-        { value: 'split', label: 'Format OCR into Markdown pages' },
+        { value: 'convert', label: 'Convert OCR data into Markdown' },
         { value: 'delete', label: 'Delete uploaded PDF' },
         { value: 'exit', label: 'Exit' },
       ],
@@ -128,9 +128,9 @@ async function main() {
       }
     }
 
-    async function splitOCR(filePath: string) {
+    async function convertOCR(filePath: string) {
       const s = spinner();
-      s.start(`Splitting OCR data into Markdown pages`);
+      s.start(`Converting OCR data into Markdown pages`);
 
       try {
         const file = Bun.file(filePath);
@@ -160,10 +160,10 @@ async function main() {
           pageCount++;
         }
 
-        s.stop(`Successfully split OCR into ${pageCount} pages in ${pagesDir}`);
+        s.stop(`Successfully converted OCR data into ${pageCount} pages in ${pagesDir}`);
         return true;
       } catch (error: any) {
-        s.stop(`Failed to split OCR: ${error.message}`);
+        s.stop(`Failed to convert OCR data: ${error.message}`);
         return false;
       }
     }
@@ -265,7 +265,7 @@ async function main() {
         continue;
       }
 
-      case 'split': {
+      case 'convert': {
         try {
           const ocrFiles = [];
           const directories = await readdir(ocrPath);
@@ -305,9 +305,9 @@ async function main() {
             continue;
           }
 
-          await splitOCR(selectedFile as string);
+          await convertOCR(selectedFile as string);
         } catch (error: any) {
-          console.error(`Failed to format OCR data: ${error.message}`);
+          console.error(`Failed to convert OCR data: ${error.message}`);
         }
         continue;
       }
