@@ -7,7 +7,7 @@ import { existsSync } from 'fs';
 const apiKey = Bun.env.MISTRAL_API_KEY;
 
 if (!apiKey) {
-  console.error("MISTRAL_API_KEY environment variable is not set\nCreate an .env file and set your Mistral API key");
+  console.error("MISTRAL_API_KEY environment variable is not set.\nCreate an .env file with your Mistral API key");
   process.exit(1);
 }
 
